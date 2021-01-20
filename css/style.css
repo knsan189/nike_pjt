@@ -1,0 +1,59 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Play&display=swap');
+
+body, html{width:100%; height:100%; background: #111; position: fixed; font-family: 'Play', sans-serif;}
+#vid {width:100%; height:100%; position: fixed;}
+#vid video{min-width: 100%; min-height: 100%; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);}
+
+
+#header{background: linear-gradient(-45deg, #e6fc55, #b9fb05, #97e031); width:700px; height:100%; position: fixed; transform: skew(-40deg); left:-420px; top:0;}
+
+#header h1{transform: skew(40deg); position: absolute; top: 40px; right:150px;}
+#header .nav{position: absolute; top:200px; right:0; width:220px}
+.depth1 > li{color:#222; text-align: right;padding:15px 0; font-size: 18px; font-weight: bold; position: relative;}
+.depth1 > li > a {display: block; padding:15px 40px 15px; transform: skew(40deg);}
+.depth1 > li > a > i {margin-right:15px;}
+.depth1 > li:hover{color:#fff; background: #000;}
+.depth2 {position: absolute; top:0; left:0%; width:0%; text-align: center; transition: all 0.5s; opacity: 0;}
+.depth1 > li:hover > .depth2{opacity: 0.8; width:80%; left:95%}
+.depth1 > li:first-child > .depth2{opacity: 0.8; width:80%; left:95%}
+.depth2 li{background: #222; color:#fff;  border-bottom:1px solid #b9fb05; margin-bottom:3px; transition: all 0.3s;}
+.depth2 li:hover{background: #b9fb05; color:#222}
+.depth2 li > a {padding:10px 0; display: block; transform: skew(40deg); font-size: 16px;}
+
+.ff{font-family: 'Monoton', cursive;font-family: 'Play', sans-serif;}
+
+
+#section .sns{position: fixed; top:60px; right:50px; font-size: 25px; color:#b9fb05; }
+#section .sns a {margin-left:15px; transition: all 0.3s;display: inline-block; opacity: 0.5 ;}
+#section .sns a:hover{transform: scale(1.4); opacity: 1;}
+
+#section .txtBox{position: fixed; right:70px; top:200px;}
+#section .txtBox p:first-child{font-size:160px; font-family: 'Monoton', cursive; color: #b9fb05;}
+#section .txtBox em{font:50px 'Play', san-serif; color:#fff}
+#section .txtBox p:nth-child(2){font-size: 34px; color:#bbb; letter-spacing: -2px;}
+#section .txtBox strong{margin-left:20px; color:#b9fb05; font-family:Arial, Helvetica, sans-serif}
+
+#section .aside{position: fixed; width:800px; height:100%; background:#111; opacity: 0.8; transform:skew(-40deg); bottom:0%; right:-800px; transition: all 0.4s;}
+#section .aside:hover{right:-500px;}
+#section .aside .con{width:400px; height:100%; position: absolute; left:135px; background: #000; transition: all 0.5s;}
+#section .aside:hover .con{left:50px;}
+#section .aside .con p{position: absolute; left:50px; bottom:50px; color:#a0bd50; transform: translate(200px);}
+#section .aside:hover .con p{transform: translate(0);}
+#section .aside .con p em{transform: skew(40deg); display: inline-block; font:bold 16px/1.7 arial; opacity: 1;}
+#section .aside .con p img{opacity: 0.3;}
+#section .aside .con p img:hover{opacity: 1;}
+#section .aside .con p:first-child{bottom:270px; transition: all 0.4;}
+#section .aside .con p:nth-child(2){bottom:160px; transition: all 0.8s;}
+#section .aside .con p:nth-child(3){transition: all 1.2s;}
+
+.aside .btn{position: absolute; bottom:40px; left:100px; color:#b9fb05; font-size: 60px; transform: skew(40deg); width:150px; height: 50px;}
+.aside .btn i{position: absolute; bottom:0; right:0; animation: arrow 1.5s infinite linear;}
+.aside .btn i:nth-child(2){animation-delay: 0.5s;}
+.aside .btn i:nth-child(3){animation-delay: 1s;}
+.aside:hover .btn{display: none;}
+
+@keyframes arrow{
+    0%{opacity: 1;}
+    100%{opacity: 0; right:100px}
+}
